@@ -1,0 +1,34 @@
+Bubble sort is a simple sorting algorithm. Its basic idea is to compare the adjacent elements of the sequence to be sorted from the front to the back (from the element with the smaller index), and if an inverse order is found, swap them to make the larger value gradually move from the front to the back, like bubbles under the water gradually rising. Bubble sort is a stable sorting method.
+
+Below is a C++ implementation:
+
+#include  <iostream>
+using namespace std;
+
+// Define an array containing the elements to be sorted
+int a[6] = {6, 3, 2, 5, 1, 4};
+
+int main() {
+    // The outer loop controls the number of sorting trips, a total of len-1 trips
+    for (int i = 0; i < 6 - 1; i++) {
+        // The inner loop controls how many times each trip is sorted
+        for (int j = 0; j < 6 - 1 - i; j++) {
+            // If the previous element is greater than the next element, swap their positions
+            if (a[j] > a[j + 1]) {
+                int temp = a[j];
+                a[j] = a[j + 1];
+                a[j + 1] = temp;
+            }
+        }
+    }
+
+    // Output the sorted result
+    for (int i = 0; i < 6; i++) {
+        cout << a[i] << " ";
+    }
+    cout << endl;
+}
+
+In this code, we define an integer array a that contains the 6 numbers to be sorted. We use two loops, the outer loop controls the number of sorting trips, and the inner loop controls the number of times each trip is sorted. We can see that in the inner loop, each time we compare the adjacent two elements, if their order is incorrect, we swap their positions. In this example, since we require an ascending sort, we compare the current element with its next element in the inner loop, and if the current element is larger than its next element, we swap their positions.
+
+The time complexity of this algorithm is O(n^2), that is, it needs to compare n^2 times. In some cases, the efficiency of this algorithm is low, but its implementation is very simple and is suitable for small data sets.
