@@ -1,0 +1,28 @@
+测试用例 1
+8 10
+a b c d e f g h
+a b 5
+a c 4
+a d 6
+b e 2
+c e 1
+d g 3
+e f 5
+e g 3
+f h 4
+g h 5
+
+测试用例 2
+9 11
+a b c d e f g h i
+a b 6
+a c 4
+a d 5
+b e 1
+c e 1
+d f 2
+e g 9
+e h 7
+f h 4
+g i 2
+h i 4
